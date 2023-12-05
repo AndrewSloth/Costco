@@ -67,9 +67,18 @@
         </dependency>
 
 
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>7.14.1</version>
+            <scope>test</scope>
+        </dependency>
 
-
-
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.5.2</version>
+        </dependency>
 
 
     </dependencies>
@@ -78,9 +87,23 @@
 
 
 
+    <build>
+    <plugins>
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M5</version>
+        <configuration>
+            <properties>
+                <configurationParameters>
+                    cucumber.junit-platform.naming-strategy=long
+                </configurationParameters>
+            </properties>
+        </configuration>
+    </plugin>
 
-
-
+    </plugins>
+    </build>
 
 
 
