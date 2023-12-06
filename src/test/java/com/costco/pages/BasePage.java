@@ -15,8 +15,10 @@ public abstract class BasePage {
 
     @FindBy(id = "navigation-dropdown")
     public WebElement shopButton;
-    @FindBy (xpath = "//li[@data-parent = 0]")
+    @FindBy(xpath = "//li[@data-parent = 0]")
     public List<WebElement> shopCategories;
+    @FindBy(id = "level1")
+    public WebElement shopMenu;
 
 
 }

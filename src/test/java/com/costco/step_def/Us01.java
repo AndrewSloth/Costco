@@ -7,8 +7,8 @@ import org.junit.Assert;
 
 public class Us01 {
 
-    @Given("user on the main page")
-    public void user_on_the_main_page() {
+    @Given("the user is on the home page")
+    public void the_user_is_on_the_home_page() {
     Driver.getDriver().get(Environment.URL);
 
     }
